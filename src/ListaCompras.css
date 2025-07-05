@@ -1,0 +1,130 @@
+.shopping-list-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.shopping-list-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3498db; 
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+    border-color: #e74c3c;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+    background-color: #2980b9; 
+}
+
+.shopping-list {
+    list-style: none;
+    padding: 0;
+}
+
+.shopping-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff; 
+    border-radius: 5px;
+    border: 1px solid #ddd; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #fff;
+}
+
+.shopping-list li:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.shopping-list li span {
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.shopping-list li button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shopping-list li button:hover {
+    background-color: #c0392b;
+}
+
+@media (max-width: 600px) {
+    .shopping-list-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    .input-container input,
+    .input-container button {
+        width: 100%;
+    }
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+    .shopping-list-container {
+        background-color: #2c3e50; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .shopping-list-container h2 {
+        color: #ecf0f1; 
+    }
+
+    .shopping-list li {
+        background-color: #34495e; 
+        border-color: #7f8c8d; 
+    }
+
+    .shopping-list li span {
+        color: #ecf0f1; 
+    }
+}
